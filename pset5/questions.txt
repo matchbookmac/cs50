@@ -1,0 +1,40 @@
+0.  GIF (8 bit) supports 256 colors
+    BMP supports (32 bit) 4294967296 colors
+    JPEG supports (24 bit) 1677216 colors
+    PNG supports (24 bit) 1677216 colors 
+    
+1.  GIF supports animation
+    
+2.  Lossless compression allows the user to reduce the file size via a method of compression, then later exactly recreate the file you had before compression. Lossy compression reduces the file size by irreversibly changing the data of the file by a series of approximations. After lossy compression, the original file cannot be reproduced, only (in the case of an image), a lower fidelity picture.
+
+3.  JPEG is lossy compressed
+
+4.  When a file is deleted on a FAT system, the system marks the file in its directory as deleted and available to be recycled; then it adds all of the file's clusters to the list of free clusters on the hard drive.
+
+5.  To ensure that my deleted files are not recovered, I could overwrite my drive with "null" characters, or some other data, using some sort of drive santitization tool.
+
+6.  stdint.h is a header file of the c standard library that defines fixed-width integer types. 
+
+7.  The use of "ints" with a defined number of bits as in "uint8_t," "uint32_t," etc. can be helpful, as the size of an "int" could vary from system to system. stdint.h guarantees that the int type chosen will have the same number of N bits accross all systems, as in "uintN_t."
+ 
+8.  1, 4, 4, and 2 bytes respectively.
+
+9.  0x42 0x4d
+
+10. bfsize is the size in bytes of the entire file, bisize is the size of the BITMAPINFOHEADER.
+
+11. if biHeight is negative, it is a top-down DIB and its origin is in the top left corner.
+
+12. biBitCount
+
+13. If fopen is unable to return a FILE pointer, it will return NULL. Additionally, if malloc, as called by fopen, fails, fopen will return NULL. Running out of memory could be an example of a situation that causes fopen to return NULL.
+
+14. Where the arguments for "fread" are (in pseudocode), fread(pointer to memory to store data read, size in bytes to read, number of elements (of given size) to read, FILE to read from). For each instance of fread in our code, we only have one element of the given size to read. For example, in inptr (our BMP file to be copied), there is only one BITMAPFILEHEADER, thus we only want to read and store one element of the size of the BITMAPFILEHEADER.
+
+15. 3
+
+16. fseek moves the position indicator of the file to a new position, determined by the offset argument provided (in bytes), and whence argument; where the whence argument is either the start of the file, the current position of the indicator, or the end of the file.
+
+17. SEEK_CUR is one of three options (SEEK_SET, SEEK_CUR, or SEEK_END) for arguments provided to fseek for its "whence" argument. SEEK_CUR corresponds to the current position of the position indicator in the given file.
+
+18. Milo Banana dun it. 
